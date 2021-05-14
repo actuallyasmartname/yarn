@@ -982,7 +982,8 @@ javadoc {
 	}
 }
 
-task javadocJar(type: Jar, dependsOn: ["javadoc"]) {
+task javadocJar(type: Jar) {
+        dependsOn("javadoc")
 	group = "javadoc generation"
 
 	from javadoc.destinationDir
