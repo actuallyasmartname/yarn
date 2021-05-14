@@ -984,6 +984,7 @@ javadoc {
 
 task javadocJar(type: Jar) {
         dependsOn("javadoc")
+	inputFile.from("javadoc")
 	group = "javadoc generation"
 
 	from javadoc.destinationDir
